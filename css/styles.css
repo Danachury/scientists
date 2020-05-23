@@ -1,0 +1,135 @@
+html {
+	font-family: OpenSans, sans-serif;
+	height: 100%;
+}
+
+body {
+	background: rgb(34,193,195);
+	background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(45,122,253,1) 100%);
+	background-position: center;
+	background-size: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+}
+
+/* Cards */
+.card-layout {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	transition: .3s all;
+}
+
+.card {
+	display: inline-block;
+	height: 500px;
+	width: 300px;
+	background: rgba(0, 0, 0, .5);
+	border-radius: 4px;
+	box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .1);
+	margin: 20px;
+	padding: 20px;
+	transform: rotateY(0deg);
+}
+
+.card:hover {
+	box-shadow: 1px 4px 10px 4px rgba(0, 0, 0, .3);
+	transition: .3s all;
+}
+
+.card.selected {
+	background: rgba(0, 0, 0, .6);
+	box-shadow: 1px 8px 10px 8px rgba(0, 0, 0, .5);
+	transition: .3s all;
+}
+
+.card-header {
+	background: rgba(0, 0, 0, .4);
+	border-radius: 4px 4px 0 0;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	height: 110px;
+	user-select: none;
+}
+
+.card-header > div {
+	padding: 10px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.card-header img {
+	border-radius: 50%;
+	height: 80px;
+	margin-top: 20px;
+}
+
+.card-body {
+	color: rgba(255, 255, 255, .9);
+	letter-spacing: 1.5px;
+	margin-top: 30px;
+	padding: 10px 8px 10px 8px;
+	height: 250px;
+}
+
+.card-body p {
+	color: #888;
+	max-height: 200px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.card-footer {
+	border-top: 1px solid rgba(0, 0, 0, .4);
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+.card-footer button {
+	background: transparent;
+	border: none;
+	color: #999;
+	cursor: pointer;
+	font-size: 16px;
+	letter-spacing: 2px;
+	margin-top: 10px;
+	outline: none;
+	padding: 2px 5px;
+	text-align: center;
+	user-select: none;
+	padding: 10px;
+}
+
+.card-footer button:hover, .card.selected .card-footer button {
+	color: white;
+	transition: .3s all;
+}
+
+.card.selected .card-footer button {
+	font-weight: bold;
+}
+
+.details-box-layout {
+	display: flex;
+	justify-content: center;
+}
+
+.details-box-layout p {
+	text-align: justify;
+}
+
+.details-box {
+	font-size: 24px;
+	letter-spacing: 2px;
+	max-width: 70%;
+}
